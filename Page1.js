@@ -57,3 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
   $('.pushpin').pushpin();
 });
+
+
+$("#submit-b").on("click",function(){
+  
+})
