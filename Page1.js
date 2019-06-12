@@ -1,50 +1,49 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.slider');
-    var instances = M.Slider.init(elems, options);
-  });
-  
-  // Or with jQuery
-  
-  $(document).ready(function(){
-    $('.slider').slider();
-  });
+//document.addEventListener('DOMContentLoaded', function () {
+  //var elems = document.querySelectorAll('.slider');
+  //var instances = M.Slider.init(elems, options);
+//});
 
-  //Autocomplete for search box (seems like a cool function)
+// Or with jQuery
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.autocomplete');
-    var instances = M.Autocomplete.init(elems, options);
-  });
+$(document).ready(function () {
+  $('.slider').slider();
+});
 
-  $(document).ready(function(){
-    $('input.autocomplete').autocomplete({
-      data: {
-        "Roscoe Villege": null,
-        "Edgwater": null,
-        "Wicker Park": null,
-        "Gold Coast": null,
-        "Streeterville": null,
-        "Beverly": null,
-        "Bucktown":null,
-        "Andersonville": null,
-        "Boystown": null,
-        "Wrigylville": null,
-        "Bridgport": null,
-        "Lincoln Park": null,
-        
-        
-      },
-    });
-  });
+//Autocomplete for search box (seems like a cool function)
 
-  //Scrollspy function
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.scrollspy');
-    var instances = M.ScrollSpy.init(elems, options);
-  });
+// document.addEventListener('DOMContentLoaded', function () {
+//   var elems = document.querySelectorAll('.autocomplete');
+//   var instances = M.Autocomplete.init(elems, options);
+// });
+
+$(document).ready(function () {
+  $('input.autocomplete').autocomplete({
+    data: {
+      "O'hare (ORD)": null,
+      "Regan (DCW)": null,
+      "Los Angeles (LAX": null,
+      "New York (JFK)": null,
+      "Seattle-Tacoma (SEA)": null,
+      "Boston (BOS)": null,
+      "Miami (MIA)": null,
+      "Midway (MID)": null,
+      "Denver (DEN)": null,
+      "Dallas-Ft.Worth (DFW)": null,
+      "Key West (EYW)": null,
+      "New Orleans(MSY)": null,
 
 
-  $(document).ready(function(){
-    $('.scrollspy').scrollSpy();
+    },
   });
-        
+});
+
+//Scrollspy function
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.scrollspy');
+  var instances = M.ScrollSpy.init(elems, options);
+});
+
+
+$(document).ready(function () {
+  $('.pushpin').pushpin();
+});

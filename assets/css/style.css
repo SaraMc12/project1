@@ -4,4 +4,10 @@
 
 .container{
 text-align: center;
+opacity: 1;
 }
+
+.Nav{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
