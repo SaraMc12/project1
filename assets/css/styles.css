@@ -1,0 +1,9 @@
+#map{
+    width: inherit;
+    height: inherit;
+}
+
+.googleMap{
+    height: 350px;
+    width: 350px;
+}  
