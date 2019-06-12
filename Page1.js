@@ -1,3 +1,13 @@
+
+ document.addEventListener('DOMContentLoaded', function() {
+  const elems = document.querySelectorAll('.sidenav');
+   M.Sidenav.init(elems, options);
+});
+ 
+ $(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
 //document.addEventListener('DOMContentLoaded', function () {
   //var elems = document.querySelectorAll('.slider');
   //var instances = M.Slider.init(elems, options);

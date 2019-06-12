@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-   
+    <script src="https://kit.fontawesome.com/fe613f4734.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,12 +17,11 @@
 <title>SRSLY</title>
 
 <body id="home" class="Nav">
-    <div class="scrollspy">
     <div class="navbar-fixed">
-        <nav class="cyan darken-1">
+        <nav class="orange lighten-1">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">SRSLY</a>
+                        <a href="#!" class="brand-logo"><i class=" medium material-icons ">local_airport</i>SRSLY</a>
                     <a href="#" data-target="mobile-nav" class="sidenav-trigger">
                         <i class="material-icons">menu</i>
                     </a>
@@ -31,59 +30,68 @@
                             <a href="#home" class="home">Home</a>
                         </li>
                         <li>
-                            <a href="#explore" class="explore">Explore homes</a>
+                            <a href="#explore" class="explore">Explore Hotels</a>
                         </li>
                         <li>
-                            <a href="about" class="about">Our Srsly good blog</a>
-                        </li>
+                                <a href="about" class="about">Get a ride</a>
+                            </li>
+                    
+                        <li>
+                                <a href="about" class="about">My profile</a>
+                            </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
     <!-- need to ad js to make this side nav drop down responsive -->
-    <ul class="sidenav" id="side-nav">
-        <li>
-            <a href="#home" class="home">Home</a>
-        </li>
-        <li>
-            <a href="#explore" class="explore">Explore homes</a>
-        </li>
-        <li>
-            <a href="about" class="about">About Srsly</a>
-        </li>
-    </ul>
+    <ul id="mobile-nav" class="sidenav">
+            <li><div class="user-view">
+                    <div class="background">
+                      <img src="https://cdn2.vectorstock.com/i/1000x1000/69/66/seamless-pattern-of-paper-planes-vector-22666966.jpg">
+                    </div>
+                      <a href="#user"><img class="circle" src="./assets/image/LADY.jpg"></a>
+                      <a href="#name"><span class="white-text name">Mooseface</span></a>
+                      <!-- <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+                    </div></li>
+                    <li><a href="#!"><i class="material-icons">mood</i>Welcome back Mooseface</a></li>
+                    <li><a href="#!">My Profile</a></li>
+                     <li><div class="divider"></div></li> 
+                    <li><a class="waves-effect" href="#!">Home</a></li>
+                    <li><a class="waves-effect" href="#!">Explore hotels near you</a></li>
+                    <li><a class="waves-effect" href="#!">Get a ride</a></li>
+                  </ul>
+                  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <!-- Image Sider -->
     <div class="slider">
         <ul class="slides">
             <li>
-                <img src="./assets/image/adorable-baby-babysitter-1257110.jpg"> <!-- random image -->
+                <img src="../project1/assets/image/adult-airport-bags-2176375 (1).jpg"> <!-- Photo Credit by Mauricio Artieda from Pexels -->
                 <div class="caption center-align">
-                    <h2 class="dark grey-text text-darken-3">Find a home with room to grow in!</h2>
-                    <h5 class="dark grey-text text-darken-3">Search thousands of open houses in your city right
-                        now.</h5>
+                    <h2 class="white-text text-darken-3">Dont ever get stuck sleeping in an airport again!</h2>
+                    <h5 class="white-text text-darken-3">check out hotels nearby</h5>
                 </div>
             </li>
             <li>
-                <img src="./assets/image/adult-alcoholic-beverages-bar-1267696.jpg"> <!-- random image -->
+                <img src="./assets/image/toa-heftiba-205003-unsplash.jpg"> <!-- Photo Credit Adobe Stock -->
                 <div class="caption left-align">
-                    <h2 class="light grey-text text-lighten-3">It's not just a home you want, but a neighborhood too
+                    <h2 class="light grey-text text-lighten-3">Wish you were here?
                     </h2>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    <h5 class="light grey-text text-lighten-3">We can find you a last min hotel reservation fast.</h5>
                 </div>
             </li>
             <li>
-                <img src="./assets/image/vintage-bathroom-2-600x398.jpg"> <!-- random image -->
+                <img src="./assets/image/wiktor-karkocha-704763-unsplash.jpg"> <!-- Photo Credit by Wiktor Karkocha on Unsplash  -->
                 <div class="caption right-align">
-                    <h3>Because pictures can't show us everything</h3>
-                    <h5 class="light grey-text text-lighten-3">see the house from top to bottom</h5>
+                    <h3>Go from feeling stuck to free again</h3>
+                    <h5 class="light grey-text text-lighten-3">Ditch the airport and explore the city</h5>
                 </div>
             </li>
             <li>
-                <img src="./assets/image/architecture-beautiful-exterior-106399 (1).jpg"> <!-- random image -->
+                <img src="./assets/image/kalen-emsley-100223-unsplash.jpg"> <!--Photo Creditby Kalen Emsley on Unsplash -->
                 <div class="caption center-align">
-                    <h3>Wish you were here?</h3>
-                    <h5 class="light grey-text text-lighten-3">let us help.</h5>
+                    <h3>When stuck in rome</h3>
+                    <h5 class="light grey-text text-lighten-3">Roam around and make the most of it.</h5>
                 </div>
             </li>
         </ul>
@@ -94,11 +102,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <h3>Search available properties</h3>
+                        <h3>Search available hotels nearby</h3>
                         <div class="input-field">
                             <input type="text" class="white grey-text autocomplete" id="text-autocomplete-input"
                                 placeholder="O'hare (ORD)">
-    
+                                <button class="btn waves-effect waves-light orange lighten-1" type="submit" name="action">Submit
+                                        
+                                      </button>
     
                         </div>
                     </div>
@@ -115,29 +125,25 @@
             <div class="row">
                 <div class="col s12 m4">
                     <div class="card-panel">
-                        <i class="material-icons large cyan-text">home</i>
+                        <i class="material-icons medium cyan-text">home</i>
                      <h4>Our Mission</h4>
-                     <p>Our goal is to make visiting open houses easy anytime, unless the house isn’t open, that would be
-                            considered trespassing. We make it simple by linking Uber to your searches so
-                            you can head over to an open house right away and beat the other yuppies. </p>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ab aut quia perspiciatis laborum aperiam aliquid nemo porro, </p>
 
                     </div>
                 </div>
                 <div class="col s12 m4">
                         <div class="card-panel">
-                            <i class="material-icons large cyan-text">home</i>
+                            <i class="material-icons medium cyan-text">home</i>
                          <h4>The Team</h4>
-                         <p> Our crack team of developers and one monkey named Francis wanted to find a
-                                way to make home searching more personal again by narrowing down searchs to open houses only keeping you up to date on the latest and hottests homes for sale</p>
+                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nesciunt tempore magni aspernatur suscipit assumenda, tota</p>
     
                         </div>
                     </div>
                     <div class="col s12 m4">
                             <div class="card-panel">
-                                <i class="material-icons large cyan-text">home</i>
+                                <i class="material-icons medium cyan-text">home</i>
                              <h4>Easy to Use</h4>
-                             <p>We teamed up with Uber to make it fast and easy for you to get to an open house whenever you want, just connect to our app using your gmail account. We put the fun in homebuying...although fun isn’t actually in the word homebuying, but you get the
-                                    point. And if you don’t, keep renting.</p>
+                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsam quos impedit excepturi explicabo. Ut neque est, r</p>
         
                             </div>
                         </div>
@@ -254,9 +260,35 @@
             </div>
         </div>
     </div>
+    <!-- Footer -->
+    <footer class="page-footer orange lighten-1">
+            <div class="container orange lighten-1">
+              <div class="row">
+                <div class="col l6 s12">
+                  <h3 class="white-text">Footer Content</h3>
+                  <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                        <i class= "fab fa-facebook-square medium"></i>
+                        <i class="fab fa-instagram medium"></i>
+                        <i class="fab fa-twitter medium"></i>
+                       
+                  
+                </div>
+              </div>
+            </div>
+            <div class="footer-copyright">
+              <div class="container">
+              © 2014 Copyright Text
+              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+              </div>
+            </div>
+          </footer>
+              
     <!--JavaScript at end of body for optimized loading-->
 
     <!-- sara, you forgot the jquery cdn -->
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="Page1.js"></script>
