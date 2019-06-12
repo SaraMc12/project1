@@ -1,12 +1,12 @@
 
- document.addEventListener('DOMContentLoaded', function() {
-  const elems = document.querySelectorAll('.sidenav');
-   M.Sidenav.init(elems, options);
-});
+//  document.addEventListener('DOMContentLoaded', function() {
+//   const elems = document.querySelectorAll('.sidenav');
+//    M.Sidenav.init(elems, options);
+// });
  
- $(document).ready(function(){
-  $('.sidenav').sidenav();
-});
+//  $(document).ready(function(){
+//   $('.sidenav').sidenav();
+// });
 
 //document.addEventListener('DOMContentLoaded', function () {
   //var elems = document.querySelectorAll('.slider');
@@ -47,11 +47,11 @@ $(document).ready(function () {
   });
 });
 
-//Scrollspy function
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.scrollspy');
-  var instances = M.ScrollSpy.init(elems, options);
-});
+// //Scrollspy function
+// document.addEventListener('DOMContentLoaded', function () {
+//   var elems = document.querySelectorAll('.scrollspy');
+//   var instances = M.ScrollSpy.init(elems, options);
+// });
 
 
 $(document).ready(function () {
@@ -88,7 +88,7 @@ function hotel(){
         token=parsed.access_token;
         console.log(token);
         $.ajax({
-          url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode=CHI",
+          url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode=CHI&adults=1&radius=10&radiusUnit=KM&paymentPolicy=NONE&includeClosed=false&bestRateOnly=false&view=FULL",
           method: "GET",
           headers: {
               "Authorization" : "Bearer " + token
@@ -96,6 +96,10 @@ function hotel(){
           success: function(response) {
              
               console.log(response);
+              localStorage.clear();
+              hotelist=JSON.stringify(response);
+              localStorage.setItem("hotel-list", hotelist);
+            
           }
       });
     }
