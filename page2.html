@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe613f4734.js"></script>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -15,19 +19,42 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
 
 </head>
 
-<body>
+<body class="cyan darken-1">
 
-    <div class="col s12">
+    <div class="navbar-fixed">
+        <nav class="orange lighten-1">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo"><i class=" medium material-icons ">local_airport</i>SRSLY</a>
+                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#home" class="home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#explore" class="explore">Explore Hotels</a>
+                        </li>
+                        <li>
+                            <a href="about" class="about">Get a ride</a>
+                        </li>
 
+                        <li>
+                            <a href="about" class="about">My profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-    <div class="container">
-        <br>
+    <section id="search" class="section cyan darken-1 white-text scrollspy">
         <div class="row">
             <div id="append" class="col s6 sidenav" style="transform: translateX(-30%);">
                 <div class="card" id="hotel-card" style="display:none">
@@ -36,7 +63,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 hotelName1">Hotel Name<i
-                                class="material-icons right hotelPrice1">Price$$</i></span>
+                                class="material-icons right hotelPrice1">$$</i></span>
                         <p class="hotelLink1"><a href="#">Link to Hotel</a></p>
                     </div>
                     <div class="card-reveal">
@@ -53,7 +80,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 hotelName2">Hotel Name<i
-                                class="material-icons right hotelPrice2">Price$$</i></span>
+                                class="material-icons right hotelPrice2">$$</i></span>
                         <p class="hotelLink2"><a href="#">Link to Hotel</a></p>
                     </div>
                     <div class="card-reveal">
@@ -70,7 +97,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 hotelName3">Hotel Name<i
-                                class="material-icons right hotelPrice3">Price$$</i></span>
+                                class="material-icons right hotelPrice3">$$</i></span>
                         <p class="hotelLink3"><a href="#">Link to Hotel</a></p>
                     </div>
                     <div class="card-reveal">
@@ -87,7 +114,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 hotelName4">Hotel Name<i
-                                class="material-icons right hotelPrice4">Price$$</i></span>
+                                class="material-icons right hotelPrice4">$$</i></span>
                         <p class="hotelLink4"><a href="#">Link to Hotel</a></p>
                     </div>
                     <div class="card-reveal">
@@ -104,7 +131,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4 hotelName5">Hotel Name<i
-                                class="material-icons right hotelPrice5">Price$$</i></span>
+                                class="material-icons right hotelPrice5">$$</i></span>
                         <p class="hotelLink5"><a href="#">Link to Hotel</a></p>
                     </div>
                     <div class="card-reveal">
@@ -125,7 +152,6 @@
             </div>
         </div>
 
-    </div>
 
 
     <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
