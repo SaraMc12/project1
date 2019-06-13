@@ -41,8 +41,6 @@ $(document).ready(function () {
       "Dallas-Ft.Worth (DFW)": null,
       "Key West (EYW)": null,
       "New Orleans(MSY)": null,
-
-
     },
   });
 });
@@ -54,6 +52,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-$(document).ready(function () {
-  $('.pushpin').pushpin();
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.parallax');
+   M.Parallax.init(elems, options);
 });
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
+      
