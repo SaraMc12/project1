@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fe613f4734.js"></script>
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -15,7 +20,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
 
 
@@ -23,13 +28,36 @@
 
 <body>
 
-    <div class="col s12">
+        <div class="navbar-fixed">
+            <nav class="orange lighten-1">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo"><i class=" medium material-icons ">local_airport</i>SRSLY</a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="#home" class="home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#explore" class="explore">Explore Hotels</a>
+                            </li>
+                            <li>
+                                <a href="about" class="about">Get a ride</a>
+                            </li>
 
-    </div>
-    <div class="container">
-        <br>
+                            <li>
+                                <a href="about" class="about">My profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+ 
         <div class="row">
-            <div class="col s6 sidenav" style="transform: translateX(-30%);">
+            <div class="col s6 sidenav" style="transform: translateX(-1%) translateY(9%);">
                 <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator hotel1" src="./assets/images/hotel 1.jpg">
@@ -116,8 +144,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col s7"></div>
-            <div class="col s5">
+            <div class="col s6"></div>
+            <div class="col s6">
                 <div class="googleMap">
                     <img src="./assets/images/Maps.jpg" alt="map">
 
@@ -125,9 +153,10 @@
             </div>
         </div>
 
-    </div>
 
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 
