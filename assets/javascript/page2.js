@@ -13,34 +13,25 @@ var map;
 var hotelData;
 
 function initMap() {
+    
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 41.8781, lng: -87.6298},
-    zoom: 9
+    zoom: 13
   });
 
 
-var marker =[ new google.maps.Marker({
-      position:{
-          lat: 41.8781, lng: -87.6298
-      },
-      
-      title:"house",
-       }),
-       new google.maps.Marker({
-      position:{
-          lat: 43.8781, lng: -87.5298
-      },
-      
-      title:"house2",
-       }),
-       new google.maps.Marker({
-      position:{
-          lat: 40.8781, lng: -87.4298
-          
-      },
-      
-      title:"house3",
-       })];
+var marker =[]
+
+for(i=0;i<hotelData.length;i++) {
+    pin=new google.maps.Marker({
+        position:{
+            lat: hotelData[i].hotel.latitude, lng: hotelData[i].hotel.longitude
+        },
+        
+        title:hotelData[i].hotel.name,
+         }),
+         marker.push(pin);
+}
        console.log(marker);
 
        for(i=0;i<marker.length;i++){
@@ -68,8 +59,8 @@ function listHotel(){
     
     hotelCard=$("#hotel-card").html();
     card.html(hotelCard);
-    card.attr("class","card")
-    $(".hotelName1").attr("id","hotel"+i)
+    card.attr("class","card");
+    $(".hotelName1").attr("id","hotel"+i);
     $("#hotel"+i).html(hotelData[i].hotel.name);
     $("#append").append(card);
    
