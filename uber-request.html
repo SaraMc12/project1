@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uber</title>
+    <style>
+        #uber-details {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Uber</h1>
+    <h2>Temporary Inputs</h2>
+    <p>This will go away eventually. It is added now to get it working.</p>
+    <form>
+        <label for="token">Uber Token:
+            <input type="text" name="token" id="token" size="100">
+        </label>
+        <br>
+        <button id="go">Go</button>
+    </form>
+    <div id="uber-details">
+        <h2>Price Estimates</h2>
+        <ul id="prices">
+            <li>Loading...</li>
+        </ul>
+        <h2>Request a ride</h2>
+        <button id="requestRideButton">Request a ride...</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/uber.js"></script>
+</body>
+</html>
