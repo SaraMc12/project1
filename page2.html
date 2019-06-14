@@ -19,6 +19,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="icon" href="./assets/image/favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+           
+        }
+
+        #page-footer {
+            height: 5%;
+        }
+
+
+
+    </style>
 </head>
 
 <body class="cyan darken-1">
@@ -55,7 +75,7 @@
         <section id="search" class="section cyan darken-1 white-text scrollspy">
             <div class="row">
                 <div class="col s6 sidenav" id="append"
-                    style="transform: translateX(-1%) translateY(20%); max-height: 450px;">
+                    style="transform: translateX(-1%) translateY(17%); max-height: 60%;">
                     <!-- <div class="card">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator hotel1" src="./assets/image/hotel.jpg">
@@ -92,8 +112,8 @@
                 </div> -->
                 </div>
                 <div class="col s6 sidenav right" id="append"
-                style="transform: translateX(-1%) translateY(20%); max-height: 450px;">
-                <!-- <div class="col s6"> -->
+                    style="transform: translateX(100%) translateY(17%); max-height: 450px;">
+                    <!-- <div class="col s6"> -->
                     <div class="googleMap">
                         <div id="map"></div>
                     </div>
@@ -103,7 +123,7 @@
     </main>
 
     <footer class="page-footer orange lighten-1">
-        <div class="container orange lighten-1">
+        <div class="container orange lighten-1" id="page-footer">
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text">Footer Content</h5>
