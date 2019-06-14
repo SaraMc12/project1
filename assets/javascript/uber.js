@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#go").on("click", start);
 
     function start(event) {
-
+ 
         // Prevent form from being submitted
         event.preventDefault();
 
