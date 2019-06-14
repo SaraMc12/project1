@@ -49,6 +49,7 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.scrollspy');
   var instances = M.ScrollSpy.init(elems, options);
+  instances.next(3);
 });
 
 
@@ -69,3 +70,13 @@ $(document).ready(function(){
 
   
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
