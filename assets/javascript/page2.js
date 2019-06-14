@@ -15,7 +15,7 @@ var hotelData;
 function initMap() {
     
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 41.8781, lng: -87.6298},
+    center: {lat: hotelData[0].hotel.latitude, lng:hotelData[0].hotel.longitude },
     zoom: 13
   });
 
@@ -47,24 +47,48 @@ function gethotel() {
     hotelist=localStorage.getItem("hotel-list");
     
     hotelData=JSON.parse(hotelist).data;
-    
+    console.log("my data"+hotelData);
 
 }
 
 
 function listHotel(){
     console.log(hotelData);
-    for(i=0;i<hotelData.length;i++){
-    card=$("<div>");
+  
+     for(i=0;i<hotelData.length;i++){
+
+  
+ var   card=$("<div class='card' id='hotel-card'  >"+
+   "<div class='card-image waves-effect waves-block waves-light'>" +
+        "<img class='activator hotel1' src='./assets/images/hotel 1.jpg' />"+
+  "</div>"+
+    "<div class='card-content'>"+
+       "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel"+i+"'>Hotel Name <i "+
+               " class='material-icons right hotelPrice1'>$$</i></span>"+
+       "<p class='hotelLink1'><a href='#'>Link to Hotel</a></p>"+
+    "</div>" +
+   "<div class='card-reveal'>"+
+        "<span class='card-title grey-text text-darken-4' id='hotel"+ i +"'>Hotel Name<i"+
+               " class='material-icons right'>close</i></span>" +
+        "<p class='hotelFeatures1'>Features:"+
+            "Everything that is great about the hotel" +
+       "</p>"+
+    "</div>"+
+"</div>");
     
-    hotelCard=$("#hotel-card").html();
-    card.html(hotelCard);
-    card.attr("class","card");
-    $(".hotelName1").attr("id","hotel"+i);
+     
+$("#append").append( card);
+    
+    
+//     // card.html(hotelCard);
+//     // card.attr("class","card");
+//     // $(".hotelName1").attr("id","hotel"+i);
     $("#hotel"+i).html(hotelData[i].hotel.name);
-    $("#append").append(card);
+
+    
    
     }
+  
 }
 gethotel();
 listHotel();
