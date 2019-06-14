@@ -1,12 +1,12 @@
 
-//  document.addEventListener('DOMContentLoaded', function() {
-//   const elems = document.querySelectorAll('.sidenav');
-//    M.Sidenav.init(elems, options);
-// });
+ document.addEventListener('DOMContentLoaded', function() {
+  const elems = document.querySelectorAll('.sidenav');
+  //  M.Sidenav.init(elems, options);
+});
  
-//  $(document).ready(function(){
-//   $('.sidenav').sidenav();
-// });
+ $(document).ready(function(){
+  $('.sidenav').sidenav();
+});
 
 //document.addEventListener('DOMContentLoaded', function () {
   //var elems = document.querySelectorAll('.slider');
@@ -41,23 +41,30 @@ $(document).ready(function () {
       "Dallas-Ft.Worth (DFW)": null,
       "Key West (EYW)": null,
       "New Orleans(MSY)": null,
-
-
     },
   });
 });
 
-// //Scrollspy function
-// document.addEventListener('DOMContentLoaded', function () {
-//   var elems = document.querySelectorAll('.scrollspy');
-//   var instances = M.ScrollSpy.init(elems, options);
-// });
-
-
-$(document).ready(function () {
-  $('.pushpin').pushpin();
+//Scrollspy function
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.scrollspy');
+  // var instances = M.ScrollSpy.init(elems, options);
 });
 
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.parallax');
+  //  M.Parallax.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+  $('.parallax').parallax();
+});
 
 $("#submit-b").on("click",function(){
   hotel();
@@ -106,3 +113,4 @@ function hotel(){
 });
 
 }
+      
