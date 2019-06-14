@@ -70,7 +70,7 @@ function listHotel(){
    "<div class='card-reveal'>"+
         "<span class='card-title grey-text text-darken-4' id='hotel"+ i +"'>Hotel Name<i"+
                " class='material-icons right'>close</i></span>" +
-        "<p class='hotelFeatures1'>Features:"+
+        "<p class='hotelFeatures1 grey-text'>Features:"+
             "Everything that is great about the hotel" +
        "</p>"+
     "</div>"+
