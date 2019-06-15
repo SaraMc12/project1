@@ -60,7 +60,11 @@ function listHotel(){
   
  var   card=$("<div class='card small' id='hotel-card'  >"+
    "<div class='card-image waves-effect waves-block waves-light'>" +
+<<<<<<< HEAD
+        "<img class='activator hotel1' src='./assets/images/hotel 1.jpg' />"+
+=======
         "<img class='activator hotel1' src='./assets/image/hotel.jpg'/>"+
+>>>>>>> 8776d777d615e95b2523442ffc53b2ad2c8d9764
   "</div>"+
     "<div class='card-content'>"+
        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel"+i+"'>Hotel Name <i "+
