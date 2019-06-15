@@ -15,10 +15,9 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="icon" href="assets/image/srsly favicon.png" type="image/x-icon">
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
 
     <style>
         body {
@@ -39,6 +38,8 @@
 
             /*desired value*/
         }
+
+       
     </style>
 </head>
 
@@ -67,32 +68,41 @@
         </div>
     </header>
 
-    <div class="loader"></div>
-
-    <main id="main" style="display:none">
-        <section id="search" class="section cyan darken-1 white-text scrollspy">
+    <main>
+        <section id="search" class="section cyan lighten-5 white-text scrollspy">
             <div class="row">
-                <div class="col s6 sidenav cyan darken-3" id="append"
-                    style="transform: translateX(-1%) translateY(20%); max-height: 60%;">
-
-                </div>
-
-                <div class="col s6 sidenav right cyan darken-3" id="append"
-                    style="transform: translateX(100%) translateY(20%); max-height: 60%;">
-
-                    <div class="googleMap">
-                        <div id="map"></div>
-
+                <form class="col s12">
+                    <div class="row orange-text center">
+                        <h5>Register New User/Log In</h3>
                     </div>
+                    <div class="row">
+                        <div class="input-field col s12">
 
-
-                </div>
-
+                            <input id="fist_name" type="text" class="validate grey-text">
+                            <label for="first_name">User Name</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate grey-text" >
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate grey-text" >
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="add-user">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer id="footer" style="display:none" class="page-footer orange lighten-1">
+    <footer id="footer" class="page-footer orange lighten-1">
         <div class="container orange lighten-1">
             <div class="row">
                 <div class="col l6 s12">
@@ -114,10 +124,10 @@
 
 
     <!-- Compiled and minified JavaScript -->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_bhDJijcYqM4ie6X-HPowGEhy8gyr8JU&callback=initMap"
         async defer></script>
     <script src="assets/javascript/page2.js"></script>
