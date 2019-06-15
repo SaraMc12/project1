@@ -1,7 +1,6 @@
-
- document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const elems = document.querySelectorAll('.sidenav');
-  //  M.Sidenav.init(elems, options);
+   M.Sidenav.init(elems, options);
 });
  
  $(document).ready(function(){
@@ -48,7 +47,7 @@ $(document).ready(function () {
 //Scrollspy function
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.scrollspy');
-  // var instances = M.ScrollSpy.init(elems, options);
+  var instances = M.ScrollSpy.init(elems, options);
 });
 
 
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.parallax');
-  //  M.Parallax.init(elems, options);
+   M.Parallax.init(elems, options);
 });
 
 // Or with jQuery
@@ -65,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.parallax').parallax();
 });
+Collapse
 
 $("#submit-b").on("click",function(){
   
@@ -118,4 +118,3 @@ function hotel(){
 });
 
 }
-      
