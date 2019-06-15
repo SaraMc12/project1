@@ -65,7 +65,11 @@ function listHotel(){
     "<div class='card-content'>"+
        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel"+i+"'>Hotel Name <i "+
                " class='material-icons right hotelPrice1'>$$</i></span>"+
-       "<p class='hotelLink1'><a href='#'>Link to Hotel</a></p>"+
+
+               "<a class='btn-floating btn-medium orange darken-3 pulse wave-light'>"+
+                   "<i class='large material-icons'> directions_car</i>"+
+               "</a>"+
+              
     "</div>" +
    "<div class='card-reveal'>"+
         "<span class='card-title grey-text text-darken-4' id='hotel"+ i +"'>Hotel Name<i"+
@@ -73,6 +77,7 @@ function listHotel(){
         "<p class='hotelFeatures1 grey-text'>Features:"+
             "Everything that is great about the hotel" +
        "</p>"+
+  
     "</div>"+
 "</div>");
     
@@ -108,3 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
     direction: 'right'
   });
 });
+
+$(document).ready(function(){
+                         
+  $('#demo-carousel-indicators').carousel({fullWidth: true});
+  
+ });
