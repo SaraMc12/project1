@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const elems = document.querySelectorAll('.sidenav');
-   M.Sidenav.init(elems, options);
+  //  M.Sidenav.init(elems, options);
 });
  
  $(document).ready(function(){
@@ -48,7 +48,7 @@ $(document).ready(function () {
 //Scrollspy function
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.scrollspy');
-  var instances = M.ScrollSpy.init(elems, options);
+  // var instances = M.ScrollSpy.init(elems, options);
 });
 
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.parallax');
-   M.Parallax.init(elems, options);
+  //  M.Parallax.init(elems, options);
 });
 
 // Or with jQuery
@@ -76,6 +76,7 @@ $("#submit-b").on("click",function(){
 
 
 function hotel(){
+  window.open("page2.html");
    city=$("#text-autocomplete-input").val();
    console.log(city);
   $.ajax({
@@ -111,18 +112,10 @@ function hotel(){
               localStorage.clear();
               hotelist=JSON.stringify(response);
               localStorage.setItem("hotel-list", hotelist);
-              window.open("page2.html");
+              
             
           }
       });
     }
 });
-
-<<<<<<< HEAD
 }
-=======
-// Message Input
-
-
-// Message Sara Mc
->>>>>>> ef4b72ac9247641dc480fa56ccdcdbe31b06360b

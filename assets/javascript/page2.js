@@ -13,7 +13,7 @@ var map;
 var hotelData;
 
 function initMap() {
-    
+   setTimeout(function(){ 
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: hotelData[0].hotel.latitude, lng:hotelData[0].hotel.longitude },
     zoom: 13
@@ -40,14 +40,18 @@ for(i=0;i<hotelData.length;i++) {
        }
 
 }
-
+,11000);}
 
 
 function gethotel() {
+  $(".loader").css("display","none");
+  $("#main").css("display","inherit");
+  $("#footer").css("display","inherit");
     hotelist=localStorage.getItem("hotel-list");
     
     hotelData=JSON.parse(hotelist).data;
     console.log("my data"+hotelData);
+    listHotel();
 
 }
 
@@ -95,8 +99,9 @@ $("#append").append( card);
     }
   
 }
-gethotel();
-listHotel();
+setTimeout(gethotel,10000);
+// gethotel();
+// listHotel();
 
 
 // zillow API for pulling up information on house
