@@ -45,8 +45,8 @@ $(document).ready(function () {
     $("#email").val("");
 
   });
-});
 
+});
   var map;
   var hotelData;
 
