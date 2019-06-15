@@ -3,19 +3,25 @@
 }
 
 .container{
-text-align: center;
+
 opacity: 1;
 }
 
 .Nav{
+    text-align: center;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .brand-logo{
     color:#ffa726;
 }
-<<<<<<< HEAD
 
-=======
+#map{
+    width:100%;
+     height: 100%;
+ }
  
->>>>>>> master
+ .googleMap{
+     width:100%;
+     height: 100%;
+ }  
