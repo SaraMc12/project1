@@ -67,12 +67,16 @@ $(document).ready(function(){
 });
 
 $("#submit-b").on("click",function(){
+  
+  
   hotel();
+ 
 })
 
 
 function hotel(){
-
+   city=$("#text-autocomplete-input").val();
+   console.log(city);
   $.ajax({
     url: 'https://test.api.amadeus.com/v1/security/oauth2/token',//Access URL goes here
     method: 'POST',
@@ -95,7 +99,7 @@ function hotel(){
         token=parsed.access_token;
         console.log(token);
         $.ajax({
-          url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode=CHI&adults=1&radius=10&radiusUnit=KM&paymentPolicy=NONE&includeClosed=false&bestRateOnly=false&view=FULL",
+          url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode="+city+"&adults=1&radius=10&radiusUnit=KM&paymentPolicy=NONE&includeClosed=false&bestRateOnly=false&view=FULL",
           method: "GET",
           headers: {
               "Authorization" : "Bearer " + token
@@ -106,6 +110,7 @@ function hotel(){
               localStorage.clear();
               hotelist=JSON.stringify(response);
               localStorage.setItem("hotel-list", hotelist);
+              window.open("page2.html");
             
           }
       });
