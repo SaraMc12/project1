@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //var instances = M.Slider.init(elems, options);
 //});
 
+
 // Or with jQuery
 
 $(document).ready(function () {
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.parallax').parallax();
 });
-Collapse
+// Collapse
 
 $("#submit-b").on("click",function(){
   
@@ -117,4 +118,11 @@ function hotel(){
     }
 });
 
+<<<<<<< HEAD
 }
+=======
+// Message Input
+
+
+// Message Sara Mc
+>>>>>>> ef4b72ac9247641dc480fa56ccdcdbe31b06360b
