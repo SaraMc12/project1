@@ -65,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.parallax').parallax();
 });
-Collapse
+// Collapse
 
 
 
 
-Message Input
+// Message Input
 
 
-Message Sara Mc
+// Message Sara Mc
