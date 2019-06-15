@@ -14,3 +14,13 @@ opacity: 1;
 .brand-logo{
     color:#ffa726;
 }
+
+#map{
+    width:100%;
+     height: 100%;
+ }
+ 
+ .googleMap{
+     width:100%;
+     height: 100%;
+ }  
