@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Srsly?</title>
     <meta charset="utf-8">
@@ -17,89 +18,113 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="icon" href="./assets/image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon">
+
+    <style>
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1 0 auto;
+
+        }
+
+        .fixed-action-btn {
+            right: 80%;
+            bottom: 15%;
+
+
+            /*desired value*/
+        }
+    </style>
 </head>
+
 <body class="cyan darken-1">
-    <div class="navbar-fixed">
-        <nav class="orange lighten-1">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo"><i class=" medium material-icons ">local_airport</i>SRSLY</a>
-                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                        <i class="material-icons">menu</i>
-                    </a>
-                    <ul class="right hide-on-med-and-down">
-                        <li>
-                            <a href="#home" class="home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#explore" class="explore">Explore Hotels</a>
-                        </li>
-                        <li>
-                            <a href="about" class="about">Get a ride</a>
-                        </li>
-                        <li>
-                            <a href="about" class="about">My profile</a>
-                        </li>
-                    </ul>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="orange lighten-1">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#!" class="brand-logo"><img src="./assets/image/srsly.PNG" height="50px"alt="logo" ></a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+                            <i class="material-icons">menu</i>
+                        </a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="#home" class="home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#explore" class="explore">Explore Hotels</a>
+                            </li>
+                            <li>
+                                <a href="about" class="about">Get a ride</a>
+                            </li>
+                            <li>
+                                <a href="about" class="about">My profile</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-    <section id="search" class="section cyan darken-1 white-text scrollspy">
-        <div class="row">
-            <div class="col s6 sidenav" id="append" style="transform: translateX(-1%) translateY(10%);">
-                <!-- <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator hotel1" src="./assets/image/hotel.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 hotelName">Hotel Name<i
-                                class="material-icons right hotelPrice">$$</i></span>
-                        <p class="hotelLink"><a href="#">Link to Hotel</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4 hotelName">Hotel Name<i
-                                class="material-icons right">close</i></span>
-                        <p class="hotelFeatures grey-text">Features:
-                            Everything that is great about the hotel
-                        </p>
-                    </div>
-                </div> -->
-                <!-- <div class="card">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator hotel1" src="./assets/image/hotel.jpg">
-                    </div>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4 hotelName1">Hotel Name<i
-                                class="material-icons right hotelPrice1">$$</i></span>
-                        <p class="hotelLink1"><a href="#">Link to Hotel</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4 hotelName1">Hotel Name<i
-                                class="material-icons right">close</i></span>
-                        <p class="hotelFeatures1">Features:
-                            Everything that is great about the hotel
-                        </p>
-                    </div>
-                </div> -->
-            </div>
-            <div class="col s6"></div>
-            <div class="col s6">
-                <div class="googleMap">
-                    <div id="map"></div>
-                </div>
-            </div>
+            </nav>
         </div>
-    </section>
+    </header>
+
+    <main>
+        <section id="search" class="section cyan darken-1 white-text scrollspy">
+            <div class="row">
+                <div class="col s6 sidenav cyan darken-3" id="append"
+                    style="transform: translateX(-1%) translateY(20%); max-height: 60%;">
+                    
+                </div>
+
+                <div class="col s6 sidenav right cyan darken-3" id="append"
+                    style="transform: translateX(100%) translateY(20%); max-height: 60%;">
+
+                    <div class="googleMap">
+                        <div id="map"></div>
+
+                    </div>
+
+                
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="page-footer orange lighten-1">
+        <div class="container orange lighten-1">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p>
+                        <p> © 2019 Copyright Text</p>
+                    </p>
+
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <i class="fab fa-facebook-square small"></i>
+                    <i class="fab fa-instagram small"></i>
+                    <i class="fab fa-twitter small"></i>
+
+
+                </div>
+            </div>
+    </footer>
+
+
     <!-- Compiled and minified JavaScript -->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-   
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_bhDJijcYqM4ie6X-HPowGEhy8gyr8JU&callback=initMap"
-    async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_bhDJijcYqM4ie6X-HPowGEhy8gyr8JU&callback=initMap"
+        async defer></script>
     <script src="assets/javascript/page2.js"></script>
 
 </body>
+
 </html>
