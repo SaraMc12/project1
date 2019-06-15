@@ -31,6 +31,14 @@
             flex: 1 0 auto;
 
         }
+
+        .fixed-action-btn {
+            right: 80%;
+            bottom: 12%;
+
+
+            /*desired value*/
+        }
     </style>
 </head>
 
@@ -70,18 +78,37 @@
                 <div class="col s6 sidenav cyan darken-3" id="append"
                     style="transform: translateX(-1%) translateY(20%); max-height: 60%;">
 
+
                 </div>
 
                 <div class="col s6 sidenav right cyan darken-3" id="append"
                     style="transform: translateX(100%) translateY(20%); max-height: 60%;">
-                    
-                            <div class="googleMap">
-                                <div id="map"></div>
-                            </div>
-                         
-                    
+
+                    <div class="googleMap">
+                        <div id="map"></div>
+
+                    </div>
+
+                    <div class="fixed-action-btn">
+                        <a class="btn-floating btn-large orange darken-3 pulse wave-light">
+                            <i class="large material-icons">directions_car</i>
+                        </a>
+                        <ul>
+                            <li><a class="btn-floating cyan"><i class="material-icons">monetization_on</i></a>
+                            </li>
+                            <li><a class="btn-floating cyan darken-2"><i class="material-icons">euro_symbol</i></a>
+                            </li>
+                            <li><a class="btn-floating cyan darken-3"><i
+                                        class="material-icons">airline_seat_individual_suite
+                                    </i></a>
+                            </li>
+                            <li><a class="btn-floating cyan darken-4"><i
+                                        class="material-icons">add_circle_outline</i></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-               
+
             </div>
         </section>
     </main>

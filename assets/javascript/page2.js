@@ -58,9 +58,9 @@ function listHotel(){
      for(i=0;i<hotelData.length;i++){
 
   
- var   card=$("<div class='card' id='hotel-card'  >"+
+ var   card=$("<div class='card small' id='hotel-card'  >"+
    "<div class='card-image waves-effect waves-block waves-light'>" +
-        "<img class='activator hotel1' src='./assets/image/hotel.jpg' />"+
+        "<img class='activator hotel1' src='./assets/image/hotel.jpg'/>"+
   "</div>"+
     "<div class='card-content'>"+
        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel"+i+"'>Hotel Name <i "+
@@ -101,3 +101,10 @@ listHotel();
 
 
 // Jimi
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {
+    direction: 'right'
+  });
+});
