@@ -58,21 +58,30 @@ function listHotel(){
      for(i=0;i<hotelData.length;i++){
 
   
- var   card=$("<div class='card' id='hotel-card'  >"+
+ var   card=$("<div class='card small' id='hotel-card'  >"+
    "<div class='card-image waves-effect waves-block waves-light'>" +
+<<<<<<< HEAD
         "<img class='activator hotel1' src='./assets/images/hotel 1.jpg' />"+
+=======
+        "<img class='activator hotel1' src='./assets/image/hotel.jpg'/>"+
+>>>>>>> 8776d777d615e95b2523442ffc53b2ad2c8d9764
   "</div>"+
     "<div class='card-content'>"+
        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel"+i+"'>Hotel Name <i "+
                " class='material-icons right hotelPrice1'>$$</i></span>"+
-       "<p class='hotelLink1'><a href='#'>Link to Hotel</a></p>"+
+
+               "<a class='btn-floating btn-medium orange darken-3 pulse wave-light'>"+
+                   "<i class='large material-icons'> directions_car</i>"+
+               "</a>"+
+              
     "</div>" +
    "<div class='card-reveal'>"+
         "<span class='card-title grey-text text-darken-4' id='hotel"+ i +"'>Hotel Name<i"+
                " class='material-icons right'>close</i></span>" +
-        "<p class='hotelFeatures1'>Features:"+
+        "<p class='hotelFeatures1 grey-text'>Features:"+
             "Everything that is great about the hotel" +
        "</p>"+
+  
     "</div>"+
 "</div>");
     
@@ -101,3 +110,16 @@ listHotel();
 
 
 // Jimi
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.fixed-action-btn');
+  var instances = M.FloatingActionButton.init(elems, {
+    direction: 'right'
+  });
+});
+
+$(document).ready(function(){
+                         
+  $('#demo-carousel-indicators').carousel({fullWidth: true});
+  
+ });
