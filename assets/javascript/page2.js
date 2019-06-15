@@ -114,8 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-$(document).ready(function(){
-                         
-  $('#demo-carousel-indicators').carousel({fullWidth: true});
-  
- });
+$(document).ready(function() {
+  $('input#input_text, textarea#textarea2').characterCounter();
+});
+      
