@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
   //var instances = M.Slider.init(elems, options);
 //});
 
+
 // Or with jQuery
 
 $(document).ready(function () {
@@ -64,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   $('.parallax').parallax();
 });
-Collapse
+// Collapse
 
 
 
 
-Message Input
+// Message Input
 
 
-Message Sara Mc
+// Message Sara Mc
