@@ -29,19 +29,13 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('input.autocomplete').autocomplete({
     data: {
-      "O'hare (ORD)": null,
-      "Regan (DCW)": null,
-      "Los Angeles (LAX": null,
-      "New York (JFK)": null,
-      "Seattle-Tacoma (SEA)": null,
-      "Boston (BOS)": null,
-      "Miami (MIA)": null,
-      "Midway (MID)": null,
-      "Denver (DEN)": null,
-      "Dallas-Ft.Worth (DFW)": null,
-      "Key West (EYW)": null,
-      "New Orleans(MSY)": null,
-    },
+      "CHI (Chicago)": null,
+      "NYC(New York)": null,
+      "LOS (Los Angeles)": null,
+      " NOLA (New Orleans)": null,
+      "(SEA)Seattle-Tacoma": null,
+      "(BOS)Boston": null,
+      "(MIA)Miami": null,
   });
 });
 
