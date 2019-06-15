@@ -6,3 +6,11 @@
     margin-left: 10px;
     margin-top: 10px;
 }
+
+#reqConfirmation {
+    display: none;
+}
+
+#confirmBtn {
+    margin-right: 10px;
+}
