@@ -35,7 +35,7 @@ $(document).ready(function () {
       " NOLA (New Orleans)": null,
       "(SEA)Seattle-Tacoma": null,
       "(BOS)Boston": null,
-      "(MIA)Miami": null,
+      "(MIA)Miami": null,}
   });
 });
 
@@ -95,7 +95,7 @@ function hotel(){
         token=parsed.access_token;
         console.log(token);
         $.ajax({
-          url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode="+city+"&adults=1&radius=10&radiusUnit=KM&paymentPolicy=NONE&includeClosed=false&bestRateOnly=false&view=FULL",
+          url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode=CHI&adults=1&radius=10&radiusUnit=KM&paymentPolicy=NONE&includeClosed=false&bestRateOnly=false&view=FULL",
           method: "GET",
           headers: {
               "Authorization" : "Bearer " + token
