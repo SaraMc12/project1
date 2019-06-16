@@ -9,89 +9,53 @@
 // google maps API to pull up map to the specific div in html
 // to pull up the information on where the house is in the zip code
 // susan
-$(document).ready(function () {
-  var firebaseConfig = {
-    apiKey: "AIzaSyC_rmr4-TDCX-0-e3vgMG_5m93IUlgiJRA",
-    authDomain: "srslyproject.firebaseapp.com",
-    databaseURL: "https://srslyproject.firebaseio.com",
-    projectId: "srslyproject",
-    storageBucket: "srslyproject.appspot.com",
-    messagingSenderId: "696599422635",
-    appId: "1:696599422635:web:4faea30ef8777d7b"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var database = firebase.database();
+var map;
+var hotelData;
 
-  $("#add-user").on("click", function (event) {
-    event.preventDefault();
-
-    var userName = $("#fist_name").val().trim();
-    var password = $("#password").val().trim();
-    var email = $("#email").val().trim();
-
-    var newUser = {
-      name: userName,
-      password: password,
-      email: email,
-    };
-   
-    database.ref().push(newUser);
-
-
-    // Clears all of the text-boxes
-    $("#fist_name").val("");
-    $("#password").val("");
-    $("#email").val("");
-
-  });
-
-});
-  var map;
-  var hotelData;
-
-  function initMap() {
-
+function initMap() {
+   setTimeout(function(){ 
     map = new google.maps.Map(document.getElementById('map'), {
-      center: {
-        lat: hotelData[0].hotel.latitude,
-        lng: hotelData[0].hotel.longitude
-      },
+      center: {lat: hotelData[0].hotel.latitude, lng:hotelData[0].hotel.longitude },
       zoom: 13
     });
-
-
-    var marker = []
-
-    for (i = 0; i < hotelData.length; i++) {
-      pin = new google.maps.Marker({
-          position: {
-            lat: hotelData[i].hotel.latitude,
-            lng: hotelData[i].hotel.longitude
+  
+  
+  var marker =[]
+  
+  for(i=0;i<hotelData.length;i++) {
+      pin=new google.maps.Marker({
+          position:{
+              lat: hotelData[i].hotel.latitude, lng: hotelData[i].hotel.longitude
           },
-
-          title: hotelData[i].hotel.name,
-        }),
-        marker.push(pin);
-    }
-    console.log(marker);
-
-    for (i = 0; i < marker.length; i++) {
-      marker[i].setMap(map);
-
-    }
-
+          
+          title:hotelData[i].hotel.name,
+           }),
+           marker.push(pin);
   }
+         console.log(marker);
+  
+         for(i=0;i<marker.length;i++){
+            marker[i].setMap(map);
+  
+         }
+   }
+,11000);
+
+    
+
+function gethotel() {
+  $(".loader").css("display","none");
+  $("#main").css("display","inherit");
+  $("#footer").css("display","inherit");
+    hotelist=localStorage.getItem("hotel-list");
+    
+    hotelData=JSON.parse(hotelist).data;
+    console.log("my data"+hotelData);
+    listHotel();
 
 
-
-  function gethotel() {
-    hotelist = localStorage.getItem("hotel-list");
-
-    hotelData = JSON.parse(hotelist).data;
-    console.log("my data" + hotelData);
-
-  }
+}
+ 
 
 
   function listHotel() {
@@ -135,10 +99,15 @@ $(document).ready(function () {
 
 
     }
+  
+}
+setTimeout(gethotel,10000);
+// gethotel();
+// listHotel();
 
   }
-  gethotel();
-  listHotel();
+  
+  
 
 
   // zillow API for pulling up information on house
