@@ -69,8 +69,8 @@ function gethotel() {
         "<img class='activator hotel1' src='./assets/image/hotel.jpg'/>" +
         "</div>" +
         "<div class='card-content'>" +
-        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel" + i + "'>Hotel Name <i " +
-        " class='material-icons right hotelPrice1'>$$</i></span>" +
+        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel" + i + "'> <h5" +
+        " class=' right green-text' id='price"+i+"'>$$</h5></span>" +
 
         "<a class='btn-floating btn-medium orange darken-3 pulse wave-light'>" +
         "<i class='large material-icons'> directions_car</i>" +
@@ -78,11 +78,18 @@ function gethotel() {
 
         "</div>" +
         "<div class='card-reveal'>" +
-        "<span class='card-title grey-text text-darken-4' id='hotel" + i + "'>Hotel Name<i" +
+        "<span class='card-title grey-text text-darken-4' id='hotel-r" + i + "'><i" +
         " class='material-icons right'>close</i></span>" +
-        "<p class='hotelFeatures1 grey-text'>Features:" +
-        "Everything that is great about the hotel" +
-        "</p>" +
+        "<div class='hotelFeatures1 grey-text'>" +
+        "<h5>Features: </h5>"+
+        
+        "<h6 class='black-text' id='description"+i+"'> Rating: </h6>"+
+        "<h6 class='black-text' id='address"+i+"'> Address : </h6>"+
+        "<h6 class='green-text' id='amenities"+i+"'> Amenities : </h6>"+
+        "<h6 class='black-text' id='contact"+i+"'> Contact : </h6>"+
+        
+
+        "</div>" +
 
         "</div>" +
         "</div>");
@@ -94,9 +101,19 @@ function gethotel() {
       //     // card.html(hotelCard);
       //     // card.attr("class","card");
       //     // $(".hotelName1").attr("id","hotel"+i);
-      $("#hotel" + i).html(hotelData[i].hotel.name);
-
-
+      $("#hotel" + i).append(hotelData[i].hotel.name);
+      $("#hotel-r" + i).append(hotelData[i].hotel.name);
+    
+      $("#description" + i).append(hotelData[i].hotel.rating);  
+      
+      $("#address" + i).append(hotelData[i].hotel.address.lines[0]); 
+      $("#address" + i).append(", "+hotelData[i].hotel.address.cityName); 
+      for(j=0;j<hotelData[i].hotel.amenities.length;j++){
+      $("#amenities" + i).append(hotelData[i].hotel.amenities[j].toLowerCase().replace(/_/g," ")+", "); 
+      }
+      $("#contact" + i).append(hotelData[i].hotel.contact.phone);
+      $("#price" + i).html(hotelData[i].offers[0].price.total+"$"); 
+      console.log(hotelData[i].offers[0].price.total);
 
     }
   
