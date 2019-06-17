@@ -2,18 +2,44 @@ $(document).ready(function () {
 
     var token = "JA.VUNmGAAAAAAAEgASAAAABwAIAAwAAAAAAAAAEgAAAAAAAAG8AAAAFAAAAAAADgAQAAQAAAAIAAwAAAAOAAAAkAAAABwAAAAEAAAAEAAAAEk5KF333O_qlytkHZkRah5sAAAAp4O0z_-irUZBeHu-vbMkJIbIFVt5TfkeWjKPRFq6i1fn94BAyfrSOn1adgXdcqcixZ2kX58XG9cS0GRVv0GBL2tRkzYU2K0X8ivVfanf_f7a8GjeiBk2_GjBvW3zI4PCT0fzzx_4G1JcqvN0DAAAABuMQiEaochbe0Qv_yQAAABiMGQ4NTgwMy0zOGEwLTQyYjMtODA2ZS03YTRjZjhlMTk2ZWU";
 
-    // Start location is always 2145 Sheridan Road, Evanston
-    // Future: Can we find out user's current location from phone/browser?
-    var rideBeginLoc = {
-        lat: "42.0578383",
-        lon: "-87.6783453"
+    // TODO Add more cities
+    var allBeginLocations = {
+        CHI: {
+            lat: "41.9741625",
+            lon: "-87.9095101"
+        },
+        NYC: {
+            lat: "40.6413111",
+            lon: "-73.7803278"
+        },
+        LAX: {
+            lat: "33.9415889",
+            lon: "-118.4107187"
+        },
+        SEA: {
+            lat: "47.6129432",
+            lon: "-122.482148"
+        },
+        BOS: {
+            lat: "42.3142647",
+            lon: "-71.1103683"
+        },
+        MIA: {
+            lat: "25.7823907",
+            lon: "-80.2994989"
+        }
     };
 
-    // TODO: This destination information has to come from hotel location that user selected on page2
-    // Right now it is Hoosier mama pies, Evanston
+    // The begin location for the uber ride is based on the city selected by user
+    var city = localStorage.getItem("city") || "CHI";
+    var rideBeginLoc = allBeginLocations[city];
+
+    // This destination information comes from hotel location that user selected on page2
+    var hotel_lat = localStorage.getItem("latitude") || "42.0390043";
+    var hotel_lon = localStorage.getItem("longitude") || "-87.6920782";
     var rideEndLoc = {
-        lat: "42.0390043",
-        lon: "-87.6920782"
+        lat: hotel_lat,
+        lon: hotel_lon
     };
 
     // Ride information will be stored here
