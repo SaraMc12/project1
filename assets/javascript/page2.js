@@ -9,16 +9,6 @@
 // google maps API to pull up map to the specific div in html
 // to pull up the information on where the house is in the zip code
 // susan
-<<<<<<< HEAD
-var map;
-var hotelData;
-
-function initMap() {
-   setTimeout(function(){ 
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: hotelData[0].hotel.latitude, lng:hotelData[0].hotel.longitude },
-    zoom: 13
-=======
 $(document).ready(function () {
   var firebaseConfig = {
     apiKey: "AIzaSyC_rmr4-TDCX-0-e3vgMG_5m93IUlgiJRA",
@@ -54,7 +44,6 @@ $(document).ready(function () {
     $("#password").val("");
     $("#email").val("");
 
->>>>>>> 2e0155bf09cf4eb8323734af8e52dc0753f0daf8
   });
 
 });
@@ -81,10 +70,6 @@ $(document).ready(function () {
             lng: hotelData[i].hotel.longitude
           },
 
-<<<<<<< HEAD
-}
-,11000);}
-=======
           title: hotelData[i].hotel.name,
         }),
         marker.push(pin);
@@ -93,23 +78,10 @@ $(document).ready(function () {
 
     for (i = 0; i < marker.length; i++) {
       marker[i].setMap(map);
->>>>>>> 2e0155bf09cf4eb8323734af8e52dc0753f0daf8
 
     }
 
-<<<<<<< HEAD
-function gethotel() {
-  $(".loader").css("display","none");
-  $("#main").css("display","inherit");
-  $("#footer").css("display","inherit");
-    hotelist=localStorage.getItem("hotel-list");
-    
-    hotelData=JSON.parse(hotelist).data;
-    console.log("my data"+hotelData);
-    listHotel();
-=======
   }
->>>>>>> 2e0155bf09cf4eb8323734af8e52dc0753f0daf8
 
 
 
@@ -163,14 +135,6 @@ function gethotel() {
 
 
     }
-<<<<<<< HEAD
-  
-}
-setTimeout(gethotel,10000);
-// gethotel();
-// listHotel();
-=======
->>>>>>> 2e0155bf09cf4eb8323734af8e52dc0753f0daf8
 
   }
   gethotel();

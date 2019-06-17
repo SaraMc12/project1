@@ -35,7 +35,7 @@ $(document).ready(function () {
       " NOLA (New Orleans)": null,
       "(SEA)Seattle-Tacoma": null,
       "(BOS)Boston": null,
-      "(MIA)Miami": null,
+      "(MIA)Miami": null,}
   });
 });
 
