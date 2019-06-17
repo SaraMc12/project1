@@ -9,153 +9,210 @@
 // google maps API to pull up map to the specific div in html
 // to pull up the information on where the house is in the zip code
 // susan
-$(document).ready(function () {
-  var firebaseConfig = {
-    apiKey: "AIzaSyC_rmr4-TDCX-0-e3vgMG_5m93IUlgiJRA",
-    authDomain: "srslyproject.firebaseapp.com",
-    databaseURL: "https://srslyproject.firebaseio.com",
-    projectId: "srslyproject",
-    storageBucket: "srslyproject.appspot.com",
-    messagingSenderId: "696599422635",
-    appId: "1:696599422635:web:4faea30ef8777d7b"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var database = firebase.database();
+var map;
+var hotelData;
 
-  $("#add-user").on("click", function (event) {
-    event.preventDefault();
+function initMap() {
+    hotel();
 
-    var userName = $("#fist_name").val().trim();
-    var password = $("#password").val().trim();
-    var email = $("#email").val().trim();
-
-    var newUser = {
-      name: userName,
-      password: password,
-      email: email,
-    };
-   
-    database.ref().push(newUser);
-
-
-    // Clears all of the text-boxes
-    $("#fist_name").val("");
-    $("#password").val("");
-    $("#email").val("");
-
-  });
-
-});
-  var map;
-  var hotelData;
-
-  function initMap() {
-
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {
-        lat: hotelData[0].hotel.latitude,
-        lng: hotelData[0].hotel.longitude
-      },
-      zoom: 13
-    });
-
-
-    var marker = []
-
-    for (i = 0; i < hotelData.length; i++) {
-      pin = new google.maps.Marker({
-          position: {
-            lat: hotelData[i].hotel.latitude,
-            lng: hotelData[i].hotel.longitude
-          },
-
-          title: hotelData[i].hotel.name,
-        }),
-        marker.push(pin);
-    }
-    console.log(marker);
-
-    for (i = 0; i < marker.length; i++) {
-      marker[i].setMap(map);
-
-    }
-
-  }
+}
 
 
 
-  function gethotel() {
-    hotelist = localStorage.getItem("hotel-list");
-
-    hotelData = JSON.parse(hotelist).data;
-    console.log("my data" + hotelData);
-
-  }
+function gethotel() {
+    $(".loader").css("display", "none");
+    $("#main").css("display", "inherit");
+    $("#footer").css("display", "inherit");
 
 
-  function listHotel() {
+
+    listHotel();
+
+
+}
+
+
+function listHotel() {
     console.log(hotelData);
 
     for (i = 0; i < hotelData.length; i++) {
 
 
-      var card = $("<div class='card small' id='hotel-card'  >" +
-        "<div class='card-image waves-effect waves-block waves-light'>" +
-        "<img class='activator hotel1' src='./assets/image/hotel.jpg'/>" +
-        "</div>" +
-        "<div class='card-content'>" +
-        "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel" + i + "'>Hotel Name <i " +
-        " class='material-icons right hotelPrice1'>$$</i></span>" +
+        var card = $("<div class='card small' id='hotel-card'  >" +
+            "<div class='card-image waves-effect waves-block waves-light'>" +
+            "<img class='activator hotel1' src='./assets/hotel-images/hotel" + i + ".jpg'/>" +
+            "</div>" +
+            "<div class='card-content'>" +
+            "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel" + i + "'> <h5" +
+            " class=' right green-text' id='price" + i + "'>$$</h5></span>" +
 
-        "<a class='btn-floating btn-medium orange darken-3 pulse wave-light'>" +
-        "<i class='large material-icons'> directions_car</i>" +
-        "</a>" +
+            "<a class='btn-floating btn-medium orange darken-3 pulse wave-light car'  data-hotel='" + i + "'>" +
+            "<i class='large material-icons'> directions_car</i>" +
+            "</a>" +
 
-        "</div>" +
-        "<div class='card-reveal'>" +
-        "<span class='card-title grey-text text-darken-4' id='hotel" + i + "'>Hotel Name<i" +
-        " class='material-icons right'>close</i></span>" +
-        "<p class='hotelFeatures1 grey-text'>Features:" +
-        "Everything that is great about the hotel" +
-        "</p>" +
+            "</div>" +
+            "<div class='card-reveal'>" +
+            "<span class='card-title grey-text text-darken-4' id='hotel-r" + i + "'><i" +
+            " class='material-icons right'>close</i></span>" +
+            "<div class='hotelFeatures1 grey-text'>" +
+            "<h5>Features: </h5>" +
 
-        "</div>" +
-        "</div>");
-
-
-      $("#append").append(card);
+            "<h6 class='black-text' id='description" + i + "'> Rating: </h6>" +
+            "<h6 class='black-text' id='address" + i + "'> Address : </h6>" +
+            "<h6 class='green-text' id='amenities" + i + "'> Amenities : </h6>" +
+            "<h6 class='black-text' id='contact" + i + "'> Contact : </h6>" +
 
 
-      //     // card.html(hotelCard);
-      //     // card.attr("class","card");
-      //     // $(".hotelName1").attr("id","hotel"+i);
-      $("#hotel" + i).html(hotelData[i].hotel.name);
+            "</div>" +
+
+            "</div>" +
+            "</div>");
 
 
+        $("#append").append(card);
+
+
+        //     // card.html(hotelCard);
+        //     // card.attr("class","card");
+        //     // $(".hotelName1").attr("id","hotel"+i);
+        $("#hotel" + i).append(hotelData[i].hotel.name);
+        $("#hotel-r" + i).append(hotelData[i].hotel.name);
+
+        $("#description" + i).append(hotelData[i].hotel.rating);
+
+        $("#address" + i).append(hotelData[i].hotel.address.lines[0]);
+        $("#address" + i).append(", " + hotelData[i].hotel.address.cityName);
+        if (hotelData[i].hotel.amenities !== "undefined") {
+            for (j = 0; j < hotelData[i].hotel.amenities.length; j++) {
+                $("#amenities" + i).append(hotelData[i].hotel.amenities[j].toLowerCase().replace(/_/g, " ") + ", ");
+            }
+        }
+
+        console.log(hotelData[i].hotel.contact.phone);
+
+
+
+        $("#contact" + i).append(hotelData[i].hotel.contact.phone);
+
+        $("#price" + i).html(hotelData[i].offers[0].price.total + "$");
+
+        console.log(hotelData[i].offers[0].price.total);
 
     }
 
-  }
-  gethotel();
-  listHotel();
+
+    $(".car").on("click", function() {
+        index = $(this).attr("data-hotel");
+        console.log(index);
+        console.log(hotelData);
+        num = parseInt(index, 10);
+        lat = hotelData[num].hotel.latitude;
+        lon = hotelData[num].hotel.longitude;
+        localStorage.setItem("latitude", lat);
+        localStorage.setItem("longitude", lon);
+
+        window.open("page3.html");
 
 
-  // zillow API for pulling up information on house
-  // looking at how to look up ZIP and available Open Houses
-  // also looking at special features in home
-  // hani
+    })
 
 
-  // Jimi
 
-  document.addEventListener('DOMContentLoaded', function () {
+
+
+}
+
+
+
+
+
+// zillow API for pulling up information on house
+// looking at how to look up ZIP and available Open Houses
+// also looking at special features in home
+// hani
+
+
+// Jimi
+
+document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems, {
-      direction: 'right'
+        direction: 'right'
     });
-  });
+});
 
-  $(document).ready(function () {
+$(document).ready(function() {
     $('input#input_text, textarea#textarea2').characterCounter();
-  });
+});
+
+function hotel() {
+    city = localStorage.getItem("city");
+
+    console.log(city);
+    $.ajax({
+        url: 'https://test.api.amadeus.com/v1/security/oauth2/token', //Access URL goes here
+        method: 'POST',
+        dataType: 'text',
+        data: {
+            scope: "read",
+            client_id: "mX4zCh7q8HuQGL0Nns3492LxojXRNMWL", //client id
+            client_secret: "nJCI4E4HNACd0yvL", //client secret id
+            grant_type: 'client_credentials'
+        },
+        headers: {
+            'Accept': 'application/json, application/x-www-form-urlencoded',
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        complete: function(data) {
+
+            /* YOUR WORK STARTS HERE! */
+            console.log(data);
+            parsed = JSON.parse(data.responseText);
+            token = parsed.access_token;
+            console.log(token);
+            $.ajax({
+                url: "https://test.api.amadeus.com/v2/shopping/hotel-offers?cityCode=" + city + "&adults=1&radius=10&radiusUnit=KM&paymentPolicy=NONE&includeClosed=false&bestRateOnly=false&view=FULL",
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + token
+                },
+                success: function(response) {
+                    hotelData = response.data;
+
+                    console.log(hotelData);
+
+
+
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: { lat: hotelData[0].hotel.latitude, lng: hotelData[0].hotel.longitude },
+                        zoom: 13
+                    });
+
+
+                    var marker = []
+
+                    for (i = 0; i < hotelData.length; i++) {
+                        pin = new google.maps.Marker({
+                                position: {
+                                    lat: hotelData[i].hotel.latitude,
+                                    lng: hotelData[i].hotel.longitude
+                                },
+
+                                title: hotelData[i].hotel.name,
+                            }),
+                            marker.push(pin);
+                    }
+                    console.log(marker);
+
+                    for (i = 0; i < marker.length; i++) {
+                        marker[i].setMap(map);
+
+                    }
+
+                    gethotel();
+
+                }
+            });
+        }
+    });
+}
