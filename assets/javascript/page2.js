@@ -32,7 +32,6 @@ function gethotel() {
 }
 
 
-
 function listHotel() {
     console.log(hotelData);
 
@@ -47,7 +46,7 @@ function listHotel() {
             "<span class='card-title activator grey-text text-darken-4 hotelName1' id='hotel" + i + "'> <h5" +
             " class=' right green-text' id='price" + i + "'>$$</h5></span>" +
 
-            "<a class='btn-floating btn-medium orange darken-3 pulse wave-light'>" +
+            "<a class='btn-floating btn-medium orange darken-3 pulse wave-light car'  data-hotel='" + i + "'>" +
             "<i class='large material-icons'> directions_car</i>" +
             "</a>" +
 
@@ -100,6 +99,26 @@ function listHotel() {
         console.log(hotelData[i].offers[0].price.total);
 
     }
+
+
+    $(".car").on("click", function() {
+        index = $(this).attr("data-hotel");
+        console.log(index);
+        console.log(hotelData);
+        num = parseInt(index, 10);
+        lat = hotelData[num].hotel.latitude;
+        lon = hotelData[num].hotel.longitude;
+        localStorage.setItem("latitude", lat);
+        localStorage.setItem("longitude", lon);
+
+        window.open("page3.html");
+
+
+    })
+
+
+
+
 
 }
 
@@ -159,7 +178,7 @@ function hotel() {
                 },
                 success: function(response) {
                     hotelData = response.data;
-                    console
+
                     console.log(hotelData);
 
 
