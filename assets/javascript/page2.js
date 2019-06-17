@@ -38,7 +38,7 @@ function listHotel() {
     for (i = 0; i < hotelData.length; i++) {
 
 
-        var card = $("<div class='card small' id='hotel-card'  >" +
+        var card = $("<div class='card medium' id='hotel-card'  >" +
             "<div class='card-image waves-effect waves-block waves-light'>" +
             "<img class='activator hotel1' src='./assets/hotel-images/hotel" + i + ".jpg'/>" +
             "</div>" +
@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function() {
     $('input#input_text, textarea#textarea2').characterCounter();
 });
+$('.sidenav').sidenav();
 
 function hotel() {
     city = localStorage.getItem("city");
@@ -216,3 +217,36 @@ function hotel() {
         }
     });
 }
+
+$(document).ready(function () {
+    var firebaseConfig = {
+      apiKey: "AIzaSyC_rmr4-TDCX-0-e3vgMG_5m93IUlgiJRA",
+      authDomain: "srslyproject.firebaseapp.com",
+      databaseURL: "https://srslyproject.firebaseio.com",
+      projectId: "srslyproject",
+      storageBucket: "srslyproject.appspot.com",
+      messagingSenderId: "696599422635",
+      appId: "1:696599422635:web:4faea30ef8777d7b"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var database = firebase.database();
+    $("#add-user").on("click", function (event) {
+      event.preventDefault();
+      var userName = $("#fist_name").val().trim();
+      var password = $("#password").val().trim();
+      var email = $("#email").val().trim();
+      var newUser = {
+        name: userName,
+        password: password,
+        email: email,
+      };
+     
+      database.ref().push(newUser);
+      // Clears all of the text-boxes
+      $("#fist_name").val("");
+      $("#password").val("");
+      $("#email").val("");
+  
+    });
+  });
