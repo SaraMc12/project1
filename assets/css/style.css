@@ -1,63 +1,80 @@
-.slider{
-    font-family:'Anton', sans-serif;
+.slider {
+    font-family: 'Anton', sans-serif;
 }
 
-.container{
-
-opacity: 1;
+.container {
+    opacity: 1;
 }
 
-.Nav{
+.Nav {
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.brand-logo{
-    color:#ffa726;
+.brand-logo {
+    color: #ffa726;
 }
 
-#map{
-    width:100%;
-     height: 100%;
- }
- 
- .googleMap{
-     width:100%;
-     height: 100%;
- }  
+#map {
+    width: 100%;
+    height: 100%;
+}
 
-  /* label color */
-  .input-field label {
-    color: 
-    #407d99;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
+.googleMap {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* label color */
+
+.input-field label {
+    color: #407d99;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
     color: #000;
-  }
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
-    border-bottom: 1px solid  #407d99;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #407d99;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* valid color */
-  .input-field input[type=text].valid {
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
     border-bottom: 1px solid green;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* invalid color */
-  .input-field input[type=text].invalid {
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
     border-bottom: 1px solid red;
     box-shadow: 0 1px 0 0 #000;
-  }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: #000;
-  }
+}
 
-  .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: #000;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -65,9 +82,17 @@ opacity: 1;
     position: fixed;
     left: 46%;
     top: 44%;
-  }
- 
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.car-button {
+    z-index: 4;
+}

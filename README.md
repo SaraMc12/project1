@@ -12,3 +12,15 @@ First page welcomes user to Srsly and offers a way to select an instant hotel ac
 User chooses a hotel accomodation on this page by utilizing a range of search criteria. Once choice has been selected, user clicks on the Uber app on chosen hotel and is then taken to page 3.
 
 Page 3 shows user Uber app and whereabouts of transportation to chosen hotel. Page 3 also gives the user the option of signing up for updates, deals, and offers by submitting their email address in the provided prompt. 
+
+### Technologies used in this project
+
+- jQuery
+- [Materialize](https://materializecss.com/) for styling
+- [Amadeus Hotel search](https://developers.amadeus.com/self-service/category/hotel/api-doc/hotel-search/api-reference)
+- [Google Cloud API](https://developers.google.com/maps/documentation/javascript/tutorial?hl=en_US), for Maps
+- [Uber API](https://developer.uber.com/docs/riders/ride-requests/introduction), for requesting a ride
+
+### Known Issues
+
+* The app currently works best on browsers other than Google Chrome. There are known issues with the APIs in Chrome.
