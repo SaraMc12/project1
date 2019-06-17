@@ -9,11 +9,12 @@ $(document).ready(function () {
         lon: "-87.6783453"
     };
 
-    // TODO: This destination information has to come from hotel location that user selected on page2
-    // Right now it is Hoosier mama pies, Evanston
+    // This destination information comes from hotel location that user selected on page2
+    var hotel_lat = localStorage.getItem("latitude") || "42.0390043";
+    var hotel_lon = localStorage.getItem("longitude") || "-87.6920782";
     var rideEndLoc = {
-        lat: "42.0390043",
-        lon: "-87.6920782"
+        lat: hotel_lat,
+        lon: hotel_lon
     };
 
     // Ride information will be stored here
