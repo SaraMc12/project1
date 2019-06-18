@@ -24,10 +24,9 @@
             <nav class="orange lighten-1">
                 <div class="container">
                     <div class="nav-wrapper">
-                        <a href="#!" class="brand-logo"><img src="./assets/image/srsly.PNG" height="50px"
-                                alt="logo"></a>
+                        <a href="#!" class="brand-logo"><img src="./assets/image/srsly.PNG" height="50px" alt="logo"></a>
                         <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                             <i class="material-icons">menu</i>
+                            <i class="material-icons">menu</i>
                         </a>
                         <ul class="right hide-on-med-and-down">
                             <li>
@@ -48,8 +47,7 @@
             <li>
                 <div class="user-view">
                     <div class="background">
-                        <img
-                            src="https://cdn2.vectorstock.com/i/1000x1000/69/66/seamless-pattern-of-paper-planes-vector-22666966.jpg">
+                        <img src="https://cdn2.vectorstock.com/i/1000x1000/69/66/seamless-pattern-of-paper-planes-vector-22666966.jpg">
                     </div>
                     <a href="#user"><img class="circle" src="./assets/image/Image from iOS.jpg"></a>
                     <a href="#name"><span class="white-text name"></span></a>
@@ -60,7 +58,7 @@
             <li><a href="./userpage.html">My Profile</a></li>
             <li><a class="waves-effect" href="./index.html">Home</a></li>
         </ul>
-        
+
         <!-- Image Sider -->
         <div class="slider">
             <ul class="slides">
@@ -73,7 +71,8 @@
                     </div>
                 </li>
                 <li>
-                    <img src="./assets/image/toa-heftiba-205003-unsplash.jpg"> <!-- Photo Credit Adobe Stock -->
+                    <img src="./assets/image/toa-heftiba-205003-unsplash.jpg">
+                    <!-- Photo Credit Adobe Stock -->
                     <div class="caption left-align">
                         <h2 class="light grey-text text-lighten-3">Wish you were here?
                         </h2>
@@ -106,10 +105,8 @@
                     <div class="col s12">
                         <h3>Search Nearby Hotels</h3>
                         <div class="input-field">
-                            <input type="text" class="white grey-text autocomplete" id="text-autocomplete-input"
-                                placeholder="Chicago (CHI)">
-                            <button id="submit-b" class="btn waves-effect waves-light  green darken-1" type="submit"
-                                name="action"><i class="material-icons">near_me
+                            <input type="text" class="white grey-text autocomplete" id="text-autocomplete-input" placeholder="Chicago (CHI)">
+                            <button id="submit-b" class="btn waves-effect waves-light  green darken-1" type="submit" name="action"><i class="material-icons">near_me
                                     
                                     </i>Submit</button>
 
@@ -271,14 +268,33 @@
         <div class="container orange lighten-1">
             <div class="row">
                 <div class="col l6 s12">
-                    <h3 class="white-text">SRSLY</h3>
-                    <p>Follow us on facebook, twitter and instagram</p>
-                    
+
+                    <div id="form-box">
+
+                        <div id="form-box-content">
+                            <h4>Subscribe to the SRSLY Newsletter</h4>
+                            <p>
+                                Stay up to date and receive exclusive content by subscribing to our newsletter.
+                            </p>
+                            <form id="form">
+                                <div class="input-field cyan-text">
+                                    <!-- <input type="hidden" name="list" id="name" value=" key_list_etc " /> -->
+                                    <input class="cyan-text" id="full-name" type="text" placeholder="Full Name" required/>
+                                    <input class="cyan-text" id="email" type="email" placeholder="Email Address" required />
+                                </div>
+                                <button type="button " id="subscribe">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="col l4 offset-l2 s12">
+
                     <i class="fab fa-facebook-square medium"></i>
                     <i class="fab fa-instagram medium"></i>
                     <i class="fab fa-twitter medium"></i>
+                    <h4>Follow us on facebook, twitter and instagram</h4>
 
 
                 </div>
@@ -298,6 +314,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="assets/javascript/index.js"></script>
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script src="./assets/javascript/footer.js"></script>
     <script src="hotel.js"></script>
 </body>
 
