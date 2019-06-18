@@ -22,6 +22,7 @@ function initMap() {
 
 function gethotel() {
     $(".loader").css("display", "none");
+    $(".load-text").css("display", "none");
     $("#main").css("display", "inherit");
     $("#footer").css("display", "inherit");
 
@@ -129,16 +130,6 @@ function listHotel() {
 }
 
 
-
-
-
-// zillow API for pulling up information on house
-// looking at how to look up ZIP and available Open Houses
-// also looking at special features in home
-// hani
-
-
-// Jimi
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
