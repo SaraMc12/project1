@@ -13,6 +13,7 @@
   //var instances = M.Slider.init(elems, options);
 //});
 
+
 // Or with jQuery
 
 $(document).ready(function () {
