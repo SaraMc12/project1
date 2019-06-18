@@ -11,6 +11,7 @@
 // susan
 var map;
 var hotelData;
+var myposition;
 
 function initMap() {
     hotel();
@@ -82,17 +83,22 @@ function listHotel() {
 
         $("#address" + i).append(hotelData[i].hotel.address.lines[0]);
         $("#address" + i).append(", " + hotelData[i].hotel.address.cityName);
-        if (hotelData[i].hotel.amenities !== "undefined") {
+        try {
             for (j = 0; j < hotelData[i].hotel.amenities.length; j++) {
                 $("#amenities" + i).append(hotelData[i].hotel.amenities[j].toLowerCase().replace(/_/g, " ") + ", ");
             }
         }
+        catch(e){
+            $("#amenities" + i).append("not available");
+        }
 
-        console.log(hotelData[i].hotel.contact.phone);
+        
 
-
-
-        $("#contact" + i).append(hotelData[i].hotel.contact.phone);
+         try{
+        $("#contact" + i).append(hotelData[i].hotel.contact.phone);}
+        catch(e){
+            $("#contact" + i).append("not available")
+        }
 
         $("#price" + i).html(hotelData[i].offers[0].price.total + "$");
 
@@ -183,34 +189,72 @@ function hotel() {
                     console.log(hotelData);
 
 
+                    x= navigator.geolocation;
+                    x.getCurrentPosition(success);
+                    function success(data){
+                        myposition=data.coords
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: { lat: hotelData[0].hotel.latitude, lng: hotelData[0].hotel.longitude },
+                            zoom: 11
+                        });
+                        
+                        console.log(myposition.longitude);
+                        localStorage.setItem("my-lat",myposition.latitude);
+                        localStorage.setItem("my-long",myposition.longitude);
+                        mypos = new google.maps.Marker({
+                            position: {
+                                lat:myposition.latitude,
+                                lng:myposition.longitude,
+                                
+                            },
+    
+                            map:map,
+                            
+    
+                            title: "my position",
+                            
+                            
+                            
+                        });
+                        mypos.setMap(map);
+                        var marker = [];
 
-                    map = new google.maps.Map(document.getElementById('map'), {
-                        center: { lat: hotelData[0].hotel.latitude, lng: hotelData[0].hotel.longitude },
-                        zoom: 13
-                    });
+                        for (i = 0; i < hotelData.length; i++) {
+                            pin = new google.maps.Marker({
+                                    position: {
+                                        lat: hotelData[i].hotel.latitude,
+                                        lng: hotelData[i].hotel.longitude
+                                    },
+    
+                                    title: hotelData[i].hotel.name,
+                                    icon: {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}
+                                })
+                                marker.push(pin);
+                        }
+                        console.log(marker);
+    
+                        for (i = 0; i < marker.length; i++) {
+                            marker[i].setMap(map);
+    
+                        }
+                        gethotel();
 
-
-                    var marker = []
-
-                    for (i = 0; i < hotelData.length; i++) {
-                        pin = new google.maps.Marker({
-                                position: {
-                                    lat: hotelData[i].hotel.latitude,
-                                    lng: hotelData[i].hotel.longitude
-                                },
-
-                                title: hotelData[i].hotel.name,
-                            }),
-                            marker.push(pin);
                     }
-                    console.log(marker);
 
-                    for (i = 0; i < marker.length; i++) {
-                        marker[i].setMap(map);
+                   
 
-                    }
 
-                    gethotel();
+                   
+
+                   
+                    
+                    
+
+
+                   
+                    
+
+                   
 
                 }
             });

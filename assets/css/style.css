@@ -81,7 +81,7 @@
     animation: spin 2s linear infinite;
     position: fixed;
     left: 46%;
-    top: 44%;
+    top: 40%;
 }
 
 @keyframes spin {
