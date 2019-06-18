@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 .slider {
     font-family: 'Anton', sans-serif;
+=======
+.slider{
+    font-family:'Anton', sans-serif;
+>>>>>>> master
 }
 
 .container {
@@ -93,6 +98,9 @@
     }
 }
 
+<<<<<<< HEAD
 .car-button {
     z-index: 4;
 }
+=======
+>>>>>>> master
