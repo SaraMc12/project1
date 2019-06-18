@@ -41,10 +41,10 @@ $(document).ready(function() {
         console.log(name.name);
         console.log(email.email);
 
-        alert("Email Added");
+        // alert("Email Added");
 
         // Clears all of the text-boxes
-        $("#name").val("");
+        $("#full-name").val("");
         $("#email").val("");
 
     });
@@ -57,7 +57,7 @@ $(document).ready(function() {
         var name = childSnapshot.val().name;
         var email = childSnapshot.val().email;
 
-        alert("Thank you for subscribing");
+        // alert("Thank you for subscribing");
 
     });
 
