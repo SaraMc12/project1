@@ -1,5 +1,5 @@
-.slider {
-    font-family: 'Anton', sans-serif;
+.slider{
+    font-family:'Anton', sans-serif;
 }
 
 .container {
@@ -7,7 +7,7 @@
 }
 
 .Nav {
-    text-align: center;
+
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -93,6 +93,6 @@
     }
 }
 
-.car-button {
-    z-index: 4;
+nav .brand-logo {
+    position: relative;
 }
