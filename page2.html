@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Srsly?</title>
+    <title>SRSLY</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -40,6 +40,16 @@
 
             /*desired value*/
         }
+
+        .profile {
+
+            z-index: 999;
+        }
+
+        footer {
+
+            font-family: 'Josefin Sans', sans-serif;
+        }
     </style>
 </head>
 
@@ -70,9 +80,25 @@
 
     <div class="loader">
     </div>
-   <h1 class="load-text">Loading...</h1>
+    <h1 class="load-text">Loading...</h1>
 
     <main id="main" style="display:none">
+        <ul id="mobile-nav" class="sidenav profile">
+            <li>
+                <div class="user-view">
+                    <div class="background">
+                        <img
+                            src="https://cdn2.vectorstock.com/i/1000x1000/69/66/seamless-pattern-of-paper-planes-vector-22666966.jpg">
+                    </div>
+                    <a href="#user"><img class="circle" src="./assets/image/Image from iOS.jpg"></a>
+                    <a href="#name"><span class="white-text name"></span></a>
+                    <!-- <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a> -->
+                </div>
+            </li>
+            <li><a href="./userpage.html"><i class="material-icons">mood</i>Welcome back Philomena</a></li>
+            <li><a href="./userpage.html">My Profile</a></li>
+            <li><a class="waves-effect" href="./index.html">Home</a></li>
+        </ul>
         <section id="search" class="section cyan darken-1 white-text scrollspy">
             <div class="row">
                 <div class="col s6 sidenav cyan darken-3" id="append"
@@ -99,9 +125,9 @@
         <div class="container orange lighten-1">
             <div class="row">
                 <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p>
-                        <p> © 2019 Copyright Text</p>
+                    <h5 class="white-text "><b>SRSLY</b></h5>
+                    <p><b>Follow us on facebook, twitter and instagram</b>
+                        <p> © 2019 Copyright</p>
                     </p>
 
                 </div>
@@ -121,6 +147,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_bhDJijcYqM4ie6X-HPowGEhy8gyr8JU&callback=initMap"
         async defer></script>
     <script src="assets/javascript/page2.js"></script>

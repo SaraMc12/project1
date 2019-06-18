@@ -26,13 +26,11 @@ $(document).ready(function () {
 
   $('input.autocomplete').autocomplete({
     data: {
-      "CHI (Chicago)": null,
-      "NYC(New York)": null,
-      "LOS (Los Angeles)": null,
-      " NOLA (New Orleans)": null,
-      "(SEA)Seattle-Tacoma": null,
-      "(BOS)Boston": null,
-      "(MIA)Miami": null,
+      "CHI Chicago": null,
+      "NYC New York ": null,
+      "LAX Los Angeles": null,
+      "BOS Boston": null,
+      "MIA Miami": null,
   }});
 
 

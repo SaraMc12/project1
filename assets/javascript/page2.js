@@ -22,6 +22,7 @@ function initMap() {
 
 function gethotel() {
     $(".loader").css("display", "none");
+    $(".load-text").css("display", "none");
     $("#main").css("display", "inherit");
     $("#footer").css("display", "inherit");
 
@@ -39,7 +40,7 @@ function listHotel() {
     for (i = 0; i < hotelData.length; i++) {
 
 
-        var card = $("<div class='card small' id='hotel-card'  >" +
+        var card = $("<div class='card medium' id='hotel-card'  >" +
             "<div class='card-image waves-effect waves-block waves-light'>" +
             "<img class='activator hotel1' src='./assets/hotel-images/hotel" + i + ".jpg'/>" +
             "</div>" +
@@ -130,16 +131,6 @@ function listHotel() {
 
 
 
-
-
-// zillow API for pulling up information on house
-// looking at how to look up ZIP and available Open Houses
-// also looking at special features in home
-// hani
-
-
-// Jimi
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems, {
@@ -150,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function() {
     $('input#input_text, textarea#textarea2').characterCounter();
 });
+$('.sidenav').sidenav();
 
 function hotel() {
     city = localStorage.getItem("city");
